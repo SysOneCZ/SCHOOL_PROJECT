@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="mediaPlayerConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="config" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="interface" />
+        <xs:element name="sound" />
+        <xs:element name="video" />
+        <xs:element name="subtitles" />
+      </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required" />
+        <xs:attribute name="id" type="xs:integer" use="required" />
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="interface">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="interfaceLanguage" type="lang"/>
+        <xs:element name="nottification" />
+        <xs:element name="videoSizeBySourceVideo" type="xs:boolean"/>
+        <xs:element name="automaticFullscreen" type="xs:boolean"/>
+        <xs:element name="continuesPlaying" type="xs:boolean"/>
+        <xs:element name="onlyOneInstance" type="xs:boolean"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="nottification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="fullscreenNotification" type="xs:boolean"/>
+        <xs:element name="playingNottification" type="xs:boolean"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="sound">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="standartVolumesettings" type="xs:integer"/>
+        <xs:element name="volumeNormalization" type="xs:boolean"/>
+        <xs:element name="audioLanguage" type="lang"/>
+        <xs:element name="soundOutput" type="sound"/>
+      </xs:sequence>
+      <xs:attribute name="enableSound" type="xs:boolean" />
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="video">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="imagingDevice" type="monitors"/>
+        <xs:element name="alwaysOnTop" type="xs:boolean"/>
+        <xs:element name="fullscreen" type="xs:boolean"/>
+      </xs:sequence>
+      <xs:attribute name="enableVideo" type="xs:boolean" />
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="subtitles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="enableOSD" type="xs:boolean"/>
+        <xs:element name="showMediaNameOnStartPlayback" type="xs:boolean"/>
+        <xs:element name="position" type="position"/>
+        <xs:element name="subtitleLanguage" type="lang"/>
+        <xs:element name="font" type="font"/>
+        <xs:element name="fontColor" type="colors"/>
+        <xs:element name="fontSize" type="size"/>
+        <xs:element name="contour" />
+        <xs:element name="enableShadows" type="xs:boolean"/>
+        <xs:element name="subtitlesBackground"/>
+      </xs:sequence>
+      <xs:attribute name="enableSubtitles" type="xs:boolean" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="contour">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="contoursColor" type="colors"/>
+      </xs:sequence>
+      <xs:attribute name="enableContours" type="xs:boolean" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="subtitlesBackground">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="BacgroundColour" type="colors"/>
+      </xs:sequence>
+      <xs:attribute name="enableBackground" type="xs:boolean" />
+    </xs:complexType>
+  </xs:element>
+
+  <!-- datove typy -->
+  <xs:simpleType name="lang">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="česky" />
+      <xs:enumeration value="anglicky(UK)" />
+      <xs:enumeration value="německy" />
+      <xs:enumeration value="rusky" />
+      <xs:enumeration value="španělsky" />
+      <xs:enumeration value="portugalsky" /> 
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="sound">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="stereo" />
+      <xs:enumeration value="mono" />
+      <xs:enumeration value="soundround" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="monitors">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="integrovanyDisplay" />
+      <xs:enumeration value="monitor1" />
+      <xs:enumeration value="monitor2" />
+      <xs:enumeration value="projektorCanon" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="position">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="left" />
+      <xs:enumeration value="right" />
+      <xs:enumeration value="topleft" />
+      <xs:enumeration value="top" />
+      <xs:enumeration value="topright" />
+      <xs:enumeration value="bottomleft" />
+      <xs:enumeration value="bottom" />
+      <xs:enumeration value="bottomright" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="colors">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="bílá" />
+      <xs:enumeration value="černá" />
+      <xs:enumeration value="modrá" />
+      <xs:enumeration value="žlutá" />
+      <xs:enumeration value="červená" />
+      <xs:enumeration value="zelená" />
+      <xs:enumeration value="hnědá" />
+      <xs:enumeration value="fialová" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="font">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Arial" />
+      <xs:enumeration value="Algerian" />
+      <xs:enumeration value="Andy" />
+      <xs:enumeration value="Comic sans MS" />
+      <xs:enumeration value="MS sans serif" />
+      <xs:enumeration value="MS serif" />
+      <xs:enumeration value="Times new Roman" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="size">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="větší" />
+      <xs:enumeration value="velká" />
+      <xs:enumeration value="normální" />
+      <xs:enumeration value="malá" />
+      <xs:enumeration value="menší" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

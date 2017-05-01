@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mediaPlayerConfig>
+  <config name="config1" id="001">
+    <interface>
+      <interfaceLanguage>česky</interfaceLanguage>
+      <nottification>
+        <fullscreenNotification>false</fullscreenNotification>
+        <playingNottification>flase</playingNottification>
+      </nottification>
+      <videoSizeBySourceVideo>true</videoSizeBySourceVideo>
+      <automaticFullscreen>true</automaticFullscreen>
+      <continuesPlaying>true</continuesPlaying>
+      <onlyOneInstance>true</onlyOneInstance>
+    </interface>
+    <sound enableSound ="true">
+      <standartVolumesettings>60</standartVolumesettings>
+      <volumeNormalization>true</volumeNormalization>
+      <audioLanguage>česky</audioLanguage>
+      <soundOutput>stereo</soundOutput>
+    </sound>
+    <video enableVideo ="true">
+      <imagingDevice>integrovanyDisplay</imagingDevice>
+      <alwaysOnTop>true</alwaysOnTop>
+      <fullscreen>true</fullscreen>
+    </video>
+    <subtitles enableSubtitles ="true">
+      <enableOSD>true</enableOSD>
+      <showMediaNameOnStartPlayback>true</showMediaNameOnStartPlayback>
+      <position>bottom</position>
+      <subtitleLanguage>česky</subtitleLanguage>
+      <font>Arial</font>
+      <fontColor>žlutá</fontColor>
+      <fontSize>normální</fontSize>
+      <contour enableContours ="true">
+        <contoursColor>white</contoursColor>
+      </contour>
+      <enableShadows>true</enableShadows>
+      <subtitlesBackground enableBackground ="true">
+        <BacgroundColour>white</BacgroundColour>
+      </subtitlesBackground>
+    </subtitles>
+  </config>
+</mediaPlayerConfig>
