@@ -25,7 +25,7 @@
     </video>
     <subtitles enableSubtitles ="true">
       <enableOSD>true</enableOSD>
-      <showMediaNameOnStartPlayback>true</showMediaNameOnStartPlayback>
+      <playingNameInfo>true</playingNameInfo>
       <position>bottom</position>
       <subtitleLanguage>česky</subtitleLanguage>
       <font>Arial</font>

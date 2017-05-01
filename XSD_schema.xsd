@@ -46,7 +46,7 @@
   <xs:element name="sound">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="standartVolumesettings" type="xs:integer"/>
+        <xs:element name="standartVolumesettings" type="volume"/>
         <xs:element name="volumeNormalization" type="xs:boolean"/>
         <xs:element name="audioLanguage" type="lang"/>
         <xs:element name="soundOutput" type="sound"/>
@@ -70,7 +70,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element name="enableOSD" type="xs:boolean"/>
-        <xs:element name="showMediaNameOnStartPlayback" type="xs:boolean"/>
+        <xs:element name="playingNameInfo" type="xs:boolean"/>
         <xs:element name="position" type="position"/>
         <xs:element name="subtitleLanguage" type="lang"/>
         <xs:element name="font" type="font"/>
@@ -170,6 +170,12 @@
       <xs:enumeration value="normální" />
       <xs:enumeration value="malá" />
       <xs:enumeration value="menší" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="volume">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="100" />
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>
