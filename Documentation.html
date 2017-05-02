@@ -160,7 +160,7 @@
             </table>
         </section>
         <section id="non">
-            <h4>3.1.1. Nastavení notifikací</h4>
+            <h4>3.1.1. Element nottification</h4>
             <table>
                 <tr style="background-color: #1214f6; color: white;">
                     <th>Název</th>
@@ -248,6 +248,11 @@
                     <th>Zapnutí/Vypnutí menu OSD (on screen display)</th>
                 </tr>
                 <tr>
+                    <th>playingNameInfo</th>
+                    <th>xs:boolean</th>
+                    <th>Zapnutí/Vypnutí zobrazení názvu média při jeho přehrávání.</th>
+                </tr>
+                <tr>
                     <th>position</th>
                     <th>position</th>
                     <th>Umožňuje nastavit pozici titulků na obrazovce</th>
@@ -263,29 +268,34 @@
                     <th>Umožňuje změnit jazyk titulků</th>
                 </tr>
                 <tr>
-                    <th>subtitleLanguage</th>
-                    <th>lang</th>
-                    <th>Umožňuje změnit jazyk titulků</th>
+                    <th>fontColor</th>
+                    <th>colors</th>
+                    <th>Umožňuje nastavit barvu písma.</th>
                 </tr>
                 <tr>
-                    <th>subtitleLanguage</th>
-                    <th>lang</th>
-                    <th>Umožňuje změnit jazyk titulků</th>
+                    <th>fontSize</th>
+                    <th>size</th>
+                    <th>Umožňuje nastavit velikost písmna</th>
                 </tr>
                 <tr>
-                    <th>subtitleLanguage</th>
-                    <th>lang</th>
-                    <th>Umožňuje změnit jazyk titulků</th>
+                    <th>contour</th>
+                    <th>xs:complexType</th>
+                    <th>Nastavení ohraničení písma</th>
                 </tr>
                 <tr>
-                    <th>subtitleLanguage</th>
-                    <th>lang</th>
-                    <th>Umožňuje změnit jazyk titulků</th>
+                    <th>enableShadows</th>
+                    <th>xs:boolean</th>
+                    <th>Umožňuje povolit stíny písma titulků</th>
+                </tr>
+                <tr>
+                    <th>subtitlesBackground</th>
+                    <th>xs:complexType</th>
+                    <th>Nastavení barvy titulků</th>
                 </tr>
             </table>
         </section>
         <section id="graph">
-            <h3>3.2. Element graphic</h3>
+            <h3>3.4.1 Element Contour</h3>
             <table>
                 <tr style="background-color: #1214f6; color: white;">
                     <th>Název</th>
@@ -293,49 +303,14 @@
                     <th>Popis</th>
                 </tr>
                 <tr>
-                    <th>resolution</th>
-                    <th>none</th>
-                    <th>Využívá atributy k nastavení základních grafických hodnot</th>
-                </tr>
-                <tr>
-                    <th>directX</th>
-                    <th><a href="#DatTyp">direct</a></th>
-                    <th>Nastavuje použitou verzi DirectX</th>
-                </tr>
-                <tr>
-                    <th>screenMode</th>
-                    <th><a href="#DatTyp">screenM</a></th>
-                    <th>Umožňuje výběr zobrazení v okně, nebo na celou obrazovku</th>
-                </tr>
-                <tr>
-                    <th>volumetricFog</th>
-                    <th>xs:boolean</th>
-                    <th>Zapíná nebo vypína volumetric fog</th>
-                </tr>
-                <tr>
-                    <th>motionBlur</th>
-                    <th>xs:boolean</th>
-                    <th>Zapíná nebo vypíná motion blur</th>
-                </tr>
-                <tr>
-                    <th>sync</th>
-                    <th>xs:complexType</th>
-                    <th>Nastavení speciálních synchonizací grafických karet</th>
-                </tr>
-                <tr>
-                    <th>buffering</th>
-                    <th><a href="#DatTyp">buffer</a></th>
-                    <th>Nastavuje typ bufferingu</th>
-                </tr>
-                <tr>
-                    <th>details</th>
-                    <th>xs:complexType</th>
-                    <th>Nastavuje úroveň detailů</th>
+                    <th>contoursColor</th>
+                    <th>colors</th>
+                    <th>Umožňuje nastavení barvy obrysu</th>
                 </tr>
             </table>
         </section>
-        <section id="details">
-            <h4>3.2.1. Element details</h4>
+        <section id="graph">
+            <h3>3.4.2 Element SubtitlesBackground</h3>
             <table>
                 <tr style="background-color: #1214f6; color: white;">
                     <th>Název</th>
@@ -343,98 +318,12 @@
                     <th>Popis</th>
                 </tr>
                 <tr>
-                    <th>textures</th>
-                    <th><a href="#DatTyp">detail</a></th>
-                    <th>Nastavení úrovně kvality u textur</th>
-                </tr>
-                <tr>
-                    <th>water</th>
-                    <th><a href="#DatTyp">detail</a></th>
-                    <th>Nastavení úrovně kvality u vody</th>
-                </tr>
-                <tr>
-                    <th>shadows</th>
-                    <th><a href="#DatTyp">detail</a></th>
-                    <th>Nastavení úrovně kvality u stínů</th>
-                </tr>
-                <tr>
-                    <th>weather</th>
-                    <th><a href="#DatTyp">detail</a></th>
-                    <th>Nastavení úrovně kvality u počasí</th>
-                </tr>
-                <tr>
-                    <th>drawDistance</th>
-                    <th><a href="#DatTyp">detail</a></th>
-                    <th>Nastavení vykreslované vzdálenosti</th>
+                    <th>BacgroundColour</th>
+                    <th>colors</th>
+                    <th>Umožňuje nastavení barvy pozadí titulků</th>
                 </tr>
             </table>
         </section>
-        <section id="sound">
-            <h3>3.3. Element sound</h3>
-            <table>
-                <tr style="background-color: #1214f6; color: white;">
-                    <th>Název</th>
-                    <th>Type</th>
-                    <th>Popis</th>
-                </tr>
-                <tr>
-                    <th>quality</th>
-                    <th><a href="#DatTyp">details</a></th>
-                    <th>Nastavuje úroveň kvality použitých zvukových souborů</th>
-                </tr>
-                <tr>
-                    <th>renderer</th>
-                    <th><a href="#DatTyp">rend</a></th>
-                    <th>Nastavuje, zda bude pro render použitý HW nebo SW</th>
-                </tr>
-                <tr>
-                    <th>output</th>
-                    <th><a href="#DatTyp">sHW</a></th>
-                    <th>Nastavuje typ zvukového zařízení, použitého jako výstup</th>
-                </tr>
-                <tr>
-                    <th>volume</th>
-                    <th>xs:complexType</th>
-                    <th>Pomocí atributů nastavuje úroveň hlasitostí</th>
-                </tr>
-            </table>
-        </section>
-        <section id="multi">
-            <h3>3.4. Element multiplayer</h3>
-            <table>
-                <tr style="background-color: #1214f6; color: white;">
-                    <th>Název</th>
-                    <th>Type</th>
-                    <th>Popis</th>
-                </tr>
-                <tr>
-                    <th>chat</th>
-                    <th>xs:boolean</th>
-                    <th>Umožňuje zapnout/vypnout chat</th>
-                </tr>
-                <tr>
-                    <th>playerIdicator</th>
-                    <th><a href="#DatTyp">indic</a></th>
-                    <th>Nastavuje, co bude použito pro označení ostatních hráčů</th>
-                </tr>
-                <tr>
-                    <th>allowDownloading</th>
-                    <th>xs:boolean</th>
-                    <th>Umožňuje zapnout/vypnout automatické stahování herních dat</th>
-                </tr>
-                <tr>
-                    <th>valveAntiCheat</th>
-                    <th>xs:boolean</th>
-                    <th>Umožňuje zapnout/vypnout anticheatovací systém</th>
-                </tr>
-                <tr>
-                    <th>voiceChat</th>
-                    <th>xs:boolean</th>
-                    <th>Umožňuje zapnout/vypnout hlasový chat</th>
-                </tr>
-            </table>
-        </section>
-
         <section id="atributy">
             <h2>4. Atributy</h2>
             <table>
@@ -446,99 +335,45 @@
                 </tr>
                 <tr>
                     <th>name</th>
-                    <th>profile</th>
+                    <th>config</th>
                     <th>xs:string</th>
-                    <th>Jméno profilu</th>
+                    <th>Jméno profilu s nastavením</th>
                 </tr>
                 <tr>
                     <th>id</th>
-                    <th>profile</th>
+                    <th>config</th>
                     <th>xs:integer</th>
-                    <th>Identifikační číslo profilu</th>
+                    <th>Identifikační číslo profilu s nastavením</th>
+                </tr>
+                <tr>
+                    <th>enableSound</th>
+                    <th>sound</th>
+                    <th>xs:boolean</th>
+                    <th>Zapnutí/Vypnutí zvuků</th>
+                </tr>
+                <tr>
+                    <th>enableVideo</th>
+                    <th>video</th>
+                    <th>xs:boolean</th>
+                    <th>Zapnutí/Vypnutí videa</th>
                 </tr>
                 <tr>
                     <th>enableSubtitles</th>
-                    <th>language</th>
+                    <th>subtitles</th>
                     <th>xs:boolean</th>
                     <th>Zapnutí/Vypnutí titulků</th>
                 </tr>
                 <tr>
-                    <th>lookAroundSenc</th>
-                    <th>firstPerson</th>
-                    <th>xs:integer</th>
-                    <th>Senzitivitu pohybu ohlížení</th>
-                </tr>
-                <tr>
-                    <th>status</th>
-                    <th>hud</th>
+                    <th>enableContours</th>
+                    <th>contour</th>
                     <th>xs:boolean</th>
-                    <th>Zapnutí/Vypnutí HUD</th>
+                    <th>Zapnutí/Vypnutí obrysu titulků</th>
                 </tr>
                 <tr>
-                    <th>res</th>
-                    <th>resolution</th>
-                    <th><a href="#DatTyp">reso</a></th>
-                    <th>Rozlišení obrazovky</th>
-                </tr>
-                <tr>
-                    <th>f</th>
-                    <th>resolution</th>
-                    <th><a href="#DatTyp">f</a></th>
-                    <th>Obnovovací frekvence obrazovky</th>
-                </tr>
-                <tr>
-                    <th>antialiasing</th>
-                    <th>resolution</th>
+                    <th>enableBackground</th>
+                    <th>subtitlesBackground</th>
                     <th>xs:boolean</th>
-                    <th>Zapnutí/Vypnutí antialiasing</th>
-                </tr>
-                <tr>
-                    <th>status</th>
-                    <th>freeSync</th>
-                    <th>xs:boolean</th>
-                    <th>Zapnutí/Vypnutí freeSync</th>
-                </tr>
-                <tr>
-                    <th>status</th>
-                    <th>gsync</th>
-                    <th>xs:boolean</th>
-                    <th>Zapnutí/Vypnutí gSync</th>
-                </tr>
-                <tr>
-                    <th>status</th>
-                    <th>vertical</th>
-                    <th>xs:boolean</th>
-                    <th>Zapnutí/Vypnutí Vertical Sync</th>
-                </tr>
-                <tr>
-                    <th>master</th>
-                    <th>volume</th>
-                    <th><a href="#DatTyp">vol</a></th>
-                    <th>Úroveň celkové hlasitosti</th>
-                </tr>
-                <tr>
-                    <th>music</th>
-                    <th>volume</th>
-                    <th><a href="#DatTyp">vol</a></th>
-                    <th>Úroveň hlasitosti hudby</th>
-                </tr>
-                <tr>
-                    <th>effects</th>
-                    <th>volume</th>
-                    <th><a href="#DatTyp">vol</a></th>
-                    <th>Úroveň hlasitosti efektů</th>
-                </tr>
-                <tr>
-                    <th>voice</th>
-                    <th>volume</th>
-                    <th><a href="#DatTyp">vol</a></th>
-                    <th>Úroveň hlasitosti hlasů</th>
-                </tr>
-                <tr>
-                    <th>ambient</th>
-                    <th>volume</th>
-                    <th><a href="#DatTyp">vol</a></th>
-                    <th>Úroveň hlasitosti okolí</th>
+                    <th>Zapnutí/Vypnutí pozadí titulků</th>
                 </tr>
             </table>
         </section>
