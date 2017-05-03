@@ -7,12 +7,11 @@
   <xsl:template match="/">
     [
     <xsl:for-each select="mediaPlayerConfig/config/video">
-      <xsl:sort select="poradi" order="descending"/>
       {
       "zobrazovací jednotka": "<xsl:value-of select ="imagingDevice"/>",
       "Vždy navrchu": "<xsl:value-of select ="alwaysOnTop"/>",
       "Fulscreen": "<xsl:value-of select ="fullscreen"/>",
-      }<xsl:if test="position() != last()">,</xsl:if>
+      }
     </xsl:for-each>
     ]
   </xsl:template>
